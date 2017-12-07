@@ -18,7 +18,7 @@ import butterknife.OnClick;
 public class MainActivity extends AppCompatActivity {
 
     @BindViews({R.id.nav_personal, R.id.nav_tests, R.id.nav_stats})
-    List<Button> btnNavList;
+    List<View> btnNavList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Menu item's click handler
     @OnClick({R.id.nav_personal, R.id.nav_tests, R.id.nav_stats})
-    void onSaveClick(Button view) {
+    void onSaveClick(View view) {
         switch (view.getId()){
             case R.id.nav_personal:
                 // TODO nav_personal click
