@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.kos.edgemobile.activities.fragments.TestsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/QuestionTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_alignParentTop="true"
+        android:text=""
+        android:textSize="18sp" />
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/QuestionTheme"
+       android:layout_above="@id/AnswerLabel"
+       >
+       <LinearLayout
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <TextView
+               android:id="@+id/Question"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               />
+           <ImageView
+               android:id="@+id/QuestionImage"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content" />
+       </LinearLayout>
+   </ScrollView>
+    <TextView
+        android:id="@+id/AnswerLabel"
+        android:layout_above="@id/AnswerUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" ответ:"
+        android:labelFor="@id/AnswerUser"
+        />
+
+    <EditText
+        android:layout_alignParentBottom="true"
+        android:id="@+id/AnswerUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        />
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">EdgeMobile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nav_personal">Personal</string>
+    <string name="nav_tests">Tests</string>
+    <string name="nav_stats">Stats</string>
+</resources>
