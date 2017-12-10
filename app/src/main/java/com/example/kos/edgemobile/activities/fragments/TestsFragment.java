@@ -32,6 +32,8 @@ import retrofit2.http.Url;
 
 public class TestsFragment extends Fragment
 {
+
+
     private TextView _QuestionText;
     private TextView _QuestionTheme;
     private ImageView _QuestionImage;
@@ -45,7 +47,6 @@ public class TestsFragment extends Fragment
     public void onCreate(Bundle  savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        //Здесь будет создан экземпляр класса Question
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -56,10 +57,17 @@ public class TestsFragment extends Fragment
         _QuestionTheme=(TextView)TestFragment.findViewById(R.id.QuestionTheme);
         _QuestionText=(TextView)TestFragment.findViewById(R.id.Question);
         _QuestionImage=(ImageView)TestFragment.findViewById(R.id.QuestionImage);
-        // !Здесь происходит ошибка, но это скорее всего связано с активностями
-       // _QuestionTheme.setText("Задание 15");
-       // _QuestionImage.setImageResource(R.drawable.test);
+        _QuestionTheme.setText("Задание 15");
+        _QuestionText.setText(_MysorPeremen);
+        _QuestionImage.setImageResource(R.drawable.ts);
+
         return TestFragment;
+
+    }
+    @Override
+    public void onStart()
+    {
+        super.onStart();
 
     }
 

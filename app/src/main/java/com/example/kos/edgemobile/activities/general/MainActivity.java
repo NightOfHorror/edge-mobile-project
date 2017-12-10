@@ -1,5 +1,6 @@
 package com.example.kos.edgemobile.activities.general;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.kos.edgemobile.R;
+import com.example.kos.edgemobile.domains.Test;
 
 import java.util.List;
 
@@ -28,8 +30,9 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        _TestsActivity =new Intent(MainActivity.this, TestsActivity.class);
+        TestsActivity act= new TestsActivity();
 
+        _TestsActivity =new Intent(MainActivity.this,TestsActivity.class);
 
     }
 
@@ -42,6 +45,7 @@ public class MainActivity extends AppCompatActivity
                 Toast.makeText(this, "NAV PERSONAL CLICKED", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_tests:
+                    //this.onPause();
                     startActivity(_TestsActivity);
                     break;
 
