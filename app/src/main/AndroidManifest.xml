@@ -14,8 +14,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activities.general.TestsActivity">
+        <activity android:name=".activities.general.TestsActivity"
+            android:windowSoftInputMode="adjustPan">
         </activity>
     </application>
-
 </manifest>

@@ -2,55 +2,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
     tools:context="com.example.kos.edgemobile.activities.fragments.TestsFragment">
-
     <!-- TODO: Update blank fragment layout -->
-
-    <TextView
-        android:id="@+id/QuestionTheme"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        android:layout_alignParentTop="true"
-        android:text=""
-        android:textSize="18sp" />
    <ScrollView
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:layout_below="@id/QuestionTheme"
-       android:layout_above="@id/AnswerLabel"
-       >
-       <LinearLayout
-           android:orientation="vertical"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content">
-           <TextView
-               android:id="@+id/Question"
+      android:layout_alignParentTop="true"
+       android:layout_above="@id/AnswerTip">
+           <android.support.v7.widget.CardView
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               />
-           <ImageView
-               android:id="@+id/QuestionImage"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               />
-       </LinearLayout>
+               android:layout_height="wrap_content">
+              <LinearLayout
+                  android:orientation="vertical"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+                   <TextView
+                       android:id="@+id/Question"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"/>
+                   <ImageView
+                       android:id="@+id/QuestionImage"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       />
+              </LinearLayout>
+           </android.support.v7.widget.CardView>
    </ScrollView>
-    <TextView
-        android:id="@+id/AnswerLabel"
-        android:layout_above="@id/AnswerUser"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=" ответ:"
-        android:labelFor="@id/AnswerUser"
-        />
+   <android.support.design.widget.TextInputLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_above="@id/Next"
+       android:id="@+id/AnswerTip"
+       >
+       <EditText
+           android:id="@+id/AnswerUser"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:singleLine="true"
+           android:inputType="numberSigned"
+           />
+   </android.support.design.widget.TextInputLayout>
+   <android.support.v7.widget.AppCompatButton
+       android:id="@+id/Next"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:textAlignment="center"
+       android:text="Следующий вопрос"/>
 
-    <EditText
-        android:layout_alignParentBottom="true"
-        android:id="@+id/AnswerUser"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-        />
 </RelativeLayout>

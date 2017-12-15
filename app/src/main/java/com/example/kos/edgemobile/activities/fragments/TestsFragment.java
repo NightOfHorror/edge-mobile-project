@@ -6,12 +6,14 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -35,9 +37,10 @@ public class TestsFragment extends Fragment
 
 
     private TextView _QuestionText;
-    private TextView _QuestionTheme;
     private ImageView _QuestionImage;
     private Question _Question;
+    private EditText _AnswerUser;
+    private TextInputLayout _AnswerTip;
     // Ее в дальнейшем я удалю
     private String _MysorPeremen="На рисунке — схема дорог, связывающих города А, Б, В, Г, Д, Е, Ж, З, И, К. " +
             "По каждой дороге можно двигаться только в одном направлении, указанном стрелкой." +
@@ -54,12 +57,15 @@ public class TestsFragment extends Fragment
     {
         // Здесь мы будем надувать наш фрагмент данными
         View TestFragment=inflater.inflate(R.layout.fragment_tests,container,false);
-        _QuestionTheme=(TextView)TestFragment.findViewById(R.id.QuestionTheme);
+
         _QuestionText=(TextView)TestFragment.findViewById(R.id.Question);
         _QuestionImage=(ImageView)TestFragment.findViewById(R.id.QuestionImage);
-        _QuestionTheme.setText("Задание 15");
+        _AnswerTip=(TextInputLayout)TestFragment.findViewById(R.id.AnswerTip);
+        _AnswerUser=(EditText)_AnswerTip.findViewById(R.id.AnswerUser);
+        _AnswerTip.setHint("Ответ (Десятичное число)");
         _QuestionText.setText(_MysorPeremen);
         _QuestionImage.setImageResource(R.drawable.ts);
+
 
         return TestFragment;
 
@@ -70,5 +76,6 @@ public class TestsFragment extends Fragment
         super.onStart();
 
     }
+
 
 }
