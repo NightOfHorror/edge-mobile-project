@@ -30,8 +30,6 @@ import retrofit2.http.Url;
  * A simple {@link Fragment} subclass.
  */
 
-// Данный класс тоже нужет только для теста
-
 public class TestsFragment extends Fragment
 {
 
@@ -55,7 +53,7 @@ public class TestsFragment extends Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
     {
-        // Здесь мы будем надувать наш фрагмент данными
+
         View TestFragment=inflater.inflate(R.layout.fragment_tests,container,false);
 
         _QuestionText=(TextView)TestFragment.findViewById(R.id.Question);
