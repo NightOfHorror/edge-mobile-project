@@ -20,4 +20,9 @@
         android:icon="@mipmap/img_stats"
         android:enabled="true"
         app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/nav_news"
+        android:title="Title"
+        android:enabled="true"
+        app:showAsAction="ifRoom"/>
 </menu>

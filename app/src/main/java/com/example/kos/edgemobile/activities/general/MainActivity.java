@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 
 import com.example.kos.edgemobile.R;
+import com.example.kos.edgemobile.activities.fragments.NewsFragment;
 import com.example.kos.edgemobile.activities.fragments.ProfileFragment;
 import com.example.kos.edgemobile.activities.fragments.StatsFragment;
 import com.example.kos.edgemobile.activities.fragments.TestsFragment;
@@ -24,9 +25,10 @@ public class MainActivity extends AppCompatActivity {
     TestsFragment testsFragment;
     StatsFragment statsFragment;
     ProfileFragment profileFragment;
+    NewsFragment newsFragment;
     FragmentTransaction fragmentTransaction;
 
-    @BindViews({R.id.nav_personal, R.id.nav_tests, R.id.nav_stats})
+    @BindViews({R.id.nav_personal, R.id.nav_tests, R.id.nav_stats, R.id.nav_news})
     List<View> btnNavList;
 
     @BindView(R.id.bottom_navigation)
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         profileFragment = new ProfileFragment();
         testsFragment = new TestsFragment();
         statsFragment = new StatsFragment();
+        newsFragment = new NewsFragment();
 
         // Menu item's click handler
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
@@ -59,6 +62,9 @@ public class MainActivity extends AppCompatActivity {
                     // TODO nav_stats click
                     replaceFragments(R.id.frame_container, statsFragment);
                     break;
+                case R.id.nav_news:
+                    // TODO nav_news click
+                    replaceFragments(R.id.frame_container, newsFragment);
             }
             return true;
         });
