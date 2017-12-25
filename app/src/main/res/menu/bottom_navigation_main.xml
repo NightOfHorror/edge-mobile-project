@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_news"
+        android:icon="@drawable/ic_news"
+        android:title="@string/nav_news"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/nav_tests"
+        android:icon="@drawable/ic_tests"
+        android:title="@string/nav_tests"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/nav_stats"
+        android:icon="@drawable/ic_stats"
+        android:title="@string/nav_stats"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/nav_personal"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/nav_profile"
+        app:showAsAction="ifRoom"/>
+</menu>
