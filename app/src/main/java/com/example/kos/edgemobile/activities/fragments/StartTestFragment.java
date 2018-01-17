@@ -1,30 +1,34 @@
 package com.example.kos.edgemobile.activities.fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.kos.edgemobile.R;
+import com.example.kos.edgemobile.activities.general.TestsActivity;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class StatsFragment extends Fragment {
+public class StartTestFragment extends Fragment
+{
 
 
-    public StatsFragment() {
+    public StartTestFragment() {
         // Required empty public constructor
     }
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                             Bundle savedInstanceState)
+    {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_stats, null);
+        return inflater.inflate(R.layout.begin_tests, null);
     }
-
 }

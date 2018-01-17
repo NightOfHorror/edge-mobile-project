@@ -1,57 +1,84 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:descendantFocusability="beforeDescendants"
-    android:focusableInTouchMode="true"
-    tools:context="com.example.kos.edgemobile.activities.fragments.TestsFragment">
-    <!-- TODO: Update blank fragment layout -->
-   <ScrollView
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-      android:layout_alignParentTop="true"
-       android:layout_above="@id/AnswerTip">
-           <android.support.v7.widget.CardView
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content">
-              <LinearLayout
-                  android:orientation="vertical"
-                   android:layout_width="match_parent"
-                   android:layout_height="match_parent">
-                   <TextView
-                       android:id="@+id/Question"
-                       android:layout_width="match_parent"
-                       android:layout_height="wrap_content"
-                       android:layout_weight="1"/>
-                   <ImageView
-                       android:id="@+id/QuestionImage"
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:layout_weight="1"
-                       />
-              </LinearLayout>
-           </android.support.v7.widget.CardView>
-   </ScrollView>
-   <android.support.design.widget.TextInputLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_above="@id/Next"
-       android:id="@+id/AnswerTip"
-       >
-       <EditText
-           android:id="@+id/AnswerUser"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:singleLine="true"
-           android:inputType="numberSigned"
-           />
-   </android.support.design.widget.TextInputLayout>
-   <android.support.v7.widget.AppCompatButton
-       android:id="@+id/Next"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_alignParentBottom="true"
-       android:textAlignment="center"
-       android:text="Следующий вопрос"/>
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context="com.example.kos.edgemobile.activities.fragments.ThemeFragment">
 
-</RelativeLayout>
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableLayout
+            android:id="@+id/table_tests"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="Выберете задание"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_weight="0.5"/>
+            <TableRow android:layout_weight="1"
+                android:gravity="center">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </TableRow>
+            <TableRow android:layout_weight="1"
+                android:gravity="center">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </TableRow>
+            <TableRow android:layout_weight="1"
+                android:gravity="center">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </TableRow>
+            <TableRow android:layout_weight="1"
+                android:gravity="center">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </TableRow>
+        </TableLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

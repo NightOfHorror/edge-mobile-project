@@ -1,4 +1,6 @@
 package com.example.kos.edgemobile.retrofit;
 
-public class RetrofitSingleton {
+public class RetrofitSingleton
+{
+
 }
